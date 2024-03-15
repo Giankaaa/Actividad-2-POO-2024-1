@@ -1,0 +1,42 @@
+/*
+22. Elaborar un algoritmo que entre el nombre de un empleado, su salario básico por hora y el
+número de horas trabajadas en el mes; escriba su nombre y salario mensual si éste es mayor
+de $450.000, de lo contrario escriba sólo el nombre.
+ */
+
+package poo.ejerciciopropuesto22;
+
+import java.util.Scanner;
+
+public class EjercicioPropuesto22 {
+
+    public static void main(String[] args) {
+        String NOM; //Nombre del trabajador.
+        int NHT; //Número de horas trabajadas al mes.
+        int VHT; //Valor basico por hora trabajada.
+        int SALARIO; //Pago total que recibe el trabajador.
+        
+        
+        
+        System.out.println("Ingrese el nombre del trabajador");
+        Scanner entradaNOM = new Scanner(System.in);
+        NOM = entradaNOM.nextLine();
+        
+        System.out.println("Ingrese el valor basico por hora");
+        Scanner entradaVHT = new Scanner(System.in);
+        VHT = entradaVHT.nextInt();
+        
+        System.out.println("Ingrese el numero de horas trabajadas");
+        Scanner entradaNHT = new Scanner(System.in);
+        NHT = entradaNHT.nextInt();
+        
+        SALARIO = NHT*VHT;
+        
+        if (SALARIO >450000){
+            System.out.println(NOM + " $" + SALARIO);
+        }
+        else{
+            System.out.println(NOM);
+        } 
+    }
+}
