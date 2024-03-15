@@ -1,0 +1,44 @@
+package com.mycompany.ejercicios_parte_1;
+
+import java.util.Scanner;
+
+public class Ejercicio_10 {
+
+    public static void main(String args[]) {
+       
+        int Numero_inscripcion;
+        String Nombres_persona;
+        long Patrimonio;
+        int Estrato_social; 
+        
+        System.out.println("Ingrese de datos del estudiante");
+        System.out.println("Ingrese el número de inscripción del estudiante");   
+        Scanner entrada = new Scanner(System.in);
+        Numero_inscripcion = entrada.nextInt();
+        
+        System.out.println("Ingrese el nombre completo del estudiante");
+        entrada.nextLine();
+        Nombres_persona = entrada.nextLine();
+        
+        System.out.println("Ingrese el valor del patrimonio del estudiante");
+        Patrimonio = entrada.nextLong();
+        
+        System.out.println("Ingrese el estrato socioeconomico del estudiante (Número)");
+        Estrato_social = entrada.nextInt();
+        
+        double Valor_inscripcion, Valor_matricula; 
+        Valor_inscripcion = 50000; 
+        
+        if ((Patrimonio > 2000000) && (Estrato_social) > 3) {
+           Valor_matricula = Valor_inscripcion + Patrimonio*0.03; 
+        }   
+        else {
+           Valor_matricula = Valor_inscripcion;
+        }
+        
+        System.out.println("El estudiante con el número de inscripción "+ Numero_inscripcion +
+                           " y nombre " + Nombres_persona + " debe pagar " + Valor_matricula);
+        
+    }
+    
+}
