@@ -1,0 +1,38 @@
+package com.mycompany.ejercicios_parte_1;
+
+import java.util.Scanner;
+
+
+public class Ejercicio_21 {
+
+
+    public static void main(String args[]) {
+        
+        double Lado_uno_triangulo;
+        double Lado_dos_Triangulo;
+        double Lado_tres_Triangulo;
+        
+        System.out.println("Ingrese el valor del primer lado de un triángulo en metros");
+        Scanner entrada = new Scanner(System.in);
+        Lado_uno_triangulo = entrada.nextDouble();
+        
+        System.out.println("Ingrese el valor del segundo lado de un triángulo en metros");
+        Lado_dos_Triangulo = entrada.nextDouble();
+        
+        System.out.println("Ingrese el valor del tercer lado de un triángulo en metros");
+        Lado_tres_Triangulo = entrada.nextDouble();
+        
+        double Perimetro_triangulo, Semiperimetro_triangulo, Area_triangulo;
+        
+        Perimetro_triangulo = Lado_uno_triangulo + Lado_dos_Triangulo + Lado_tres_Triangulo ;
+        Semiperimetro_triangulo = Perimetro_triangulo/2;
+        Area_triangulo = 0.25*Math.sqrt((Lado_uno_triangulo+Lado_dos_Triangulo+Lado_tres_Triangulo)*(Lado_dos_Triangulo+Lado_tres_Triangulo-Lado_uno_triangulo)*(Lado_uno_triangulo-
+        Lado_dos_Triangulo+Lado_tres_Triangulo)*(Lado_uno_triangulo+Lado_dos_Triangulo-Lado_tres_Triangulo));
+        
+        System.out.println("El perímetro del triángulo dado es " + Perimetro_triangulo + " m ");
+        System.out.println("El semiperímetro del triángulo dado es " + Semiperimetro_triangulo + " m ");
+        System.out.println("El área del triángulo dado es " + Area_triangulo + " m^2 ");
+        
+        
+    }
+}
