@@ -11,7 +11,7 @@ public class Cuadrado {
         return l*l;
     }
 
-    double calcularPerímetro() {
+    double calcularPerimetro() {
         return (4*l);
     }
 }
