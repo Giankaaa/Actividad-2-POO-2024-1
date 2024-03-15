@@ -1,0 +1,72 @@
+/*
+ Ejercicio resuelto Nº 15
+Se tienen cuatro esferas (A, B, C, D) de las cuales se sabe que tres son de igual peso y una
+diferente. Elaborar un algoritmo que determine cuál es la esfera diferente y si es de mayor
+o menor peso.
+ */
+
+package poo.ejercicioresuelto15;
+
+import java.util.Scanner;
+
+public class EjercicioResuelto15 {
+
+    public static void main(String[] args) {
+        
+        int PA; //Peso de la esfera A
+        int PB; //Peso de la esfera D
+        int PC; //Peso de la esfera C
+        int PD; //Peso de la esfera B
+        
+        System.out.println("Ingrese el peso de la esfera A");
+        Scanner entradaPA = new Scanner(System.in);
+        PA = entradaPA.nextInt();
+        
+        System.out.println("Ingrese el peso de la esfera B");
+        Scanner entradaPB = new Scanner(System.in);
+        PB = entradaPB.nextInt();
+        
+        System.out.println("Ingrese el peso de la esfera C");
+        Scanner entradaPC = new Scanner(System.in);
+        PC = entradaPC.nextInt();
+        
+        System.out.println("Ingrese el peso de la esfera D");
+        Scanner entradaPD = new Scanner(System.in);
+        PD = entradaPD.nextInt();
+        
+        if ((PA == PB) && (PA == PC)){
+            if (PD > PA){
+                System.out.println("LA ESFERA D ES DIFERENTE Y ES DE MAYOR PESO");
+            }
+            else {
+                System.out.println("LA ESFERA D ES DIFERENTE Y ES DE MENOR PESO");
+            }
+        }
+        else if ((PA == PB) && (PA == PD)){
+            if (PC > PA){
+                System.out.println("LA ESFERA C ES DIFERENTE Y ES DE MAYOR PESO");
+            }
+            else {
+                System.out.println("LA ESFERA C ES DIFERENTE Y ES DE MENOR PESO");
+            }
+        }
+        else if ((PA == PC) && (PA == PD)){
+            if (PB > PA){
+                System.out.println("LA ESFERA B ES DIFERENTE Y ES DE MAYOR PESO");
+            }
+            else {
+                System.out.println("LA ESFERA B ES DIFERENTE Y ES DE MENOR PESO");
+            }
+        }
+        else{
+            if (PA > PB){
+                System.out.println("LA ESFERA A ES DIFERENTE Y ES DE MAYOR PESO");
+            }
+            else {
+                System.out.println("LA ESFERA A ES DIFERENTE Y ES DE MENOR PESO");
+            }
+        
+        }
+             
+    }
+}
