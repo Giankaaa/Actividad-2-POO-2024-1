@@ -13,7 +13,7 @@ public class Rectangulo {
         return b*h;
     }
 
-    double calcularPerímetro() {
+    double calcularPerimetro() {
         return (2*b) + (2*h);
     }
 }
