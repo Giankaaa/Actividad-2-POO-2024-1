@@ -1,0 +1,34 @@
+package com.mycompany.ejercicios_parte_1;
+
+import java.util.Scanner;
+
+
+public class Ejercicio_11 {
+    
+    public static void main(String args[]) {
+        
+        double Valor_A;
+        double Valor_B;
+        double Valor_C;
+        
+        System.out.println("Ingrese el valor del primer número llamado A");
+        Scanner entrada = new Scanner(System.in);
+        Valor_A = entrada.nextDouble();
+        
+        System.out.println("Ingrese el valor del segundo número llamado B");
+        Valor_B = entrada.nextDouble();
+        
+        System.out.println("Ingrese el valor del tercer número llamado C");
+        Valor_C = entrada.nextDouble();
+        
+        if ((Valor_A > Valor_B) && (Valor_A > Valor_C)){
+            System.out.println(" El valor de A es el mayor valor de todos los tres valores digitados");
+        }
+        else if ( (Valor_B > Valor_A) && (Valor_B > Valor_C)){
+            System.out.println(" El valor de B es el mayor valor de todos los tres valores digitados");
+        }
+        else { 
+            System.out.println(" El valor de C es el mayor valor de todos los tres valores digitados");
+        }
+    }
+}
