@@ -1,0 +1,37 @@
+/*
+23. Dados los valores A, B y C que son los parámetros de una ecuación de segundo grado,
+elaborar un algoritmo para hallar las posibles soluciones de dicha ecuación.
+ */
+
+package poo.ejerciciopropuesto23;
+
+import java.util.Scanner;
+
+public class EjercicioPropuesto23 {
+
+    public static void main(String[] args) {
+        double A; 
+        double B;
+        double C;
+        double Sol1;
+        double Sol2; 
+        System.out.println("Encuentra las soluciones de la ecuacion de segundo grado Ax^2+Bx+C=0 (solo para soluciones reales)");  
+        
+        System.out.println("Ingresa el valor de A");
+        Scanner entradaA = new Scanner(System.in);
+        A = entradaA.nextDouble();
+        
+        System.out.println("Ingresa el valor de B");
+        Scanner entradaB = new Scanner(System.in);
+        B = entradaB.nextDouble();
+        
+        System.out.println("Ingresa el valor de C");
+        Scanner entradaC = new Scanner(System.in);
+        C = entradaC.nextDouble();
+        
+        Sol1 = (-B + Math.sqrt((Math.pow(B, 2))-(4*A*C)))/(Math.pow(A, 2));
+        Sol2 = (-B - Math.sqrt((Math.pow(B, 2))-(4*A*C)))/(Math.pow(A, 2));
+        
+        System.out.println("Para esta ecuacion las soluciones son:   x=" + Sol1 + "y x=" + Sol2);
+    }
+}
