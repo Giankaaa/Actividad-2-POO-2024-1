@@ -1,0 +1,53 @@
+package com.mycompany.ejercicios_parte_1;
+
+import java.util.Scanner;
+
+
+public class Ejercicios_Parte_1 {
+
+    public static void main(String[] args) {
+        
+        int Cod_empleado;
+        String  Nombre_empleado;
+        int Numero_horas_empleado;
+        double Valor_hora;
+        double Por_retencion;
+      
+         
+        System.out.println(" Ingrese el código del emepleado");
+        Scanner entrada = new Scanner(System.in);
+        Cod_empleado = entrada.nextInt();
+        
+        System.out.println(" Ingrese el nombre del emepleado");
+        entrada.nextLine();
+        Nombre_empleado = entrada.nextLine();
+        
+        System.out.println(" Ingrese el número de horas del emepleado");
+        Numero_horas_empleado = entrada.nextInt();
+        
+        System.out.println(" Ingrese el valor de la hora del emepleado");
+        Valor_hora = entrada.nextDouble();
+        
+        System.out.println(" Ingrese el porcentaje de retención");
+        Por_retencion = entrada.nextDouble();
+        
+        //entrada.close();
+        
+        double Salario_bruto, Porcentaje_Reten, Valor_Reten, Salario_Neto;
+        
+        Salario_bruto = Valor_hora*Numero_horas_empleado;
+        Porcentaje_Reten = Por_retencion/100;
+        Valor_Reten = Salario_bruto*Porcentaje_Reten;
+        Salario_Neto = Salario_bruto - Valor_Reten;
+        
+        
+        
+        System.out.println("El Nombre del empleado es " + Nombre_empleado);
+        System.out.println("El codigo del empleado es " + Cod_empleado);
+        System.out.println("El Salario bruto del empleado es " + Salario_bruto);
+        System.out.println("El Salario neto del empleado es " + Salario_Neto);
+        
+        
+        
+    }
+}
