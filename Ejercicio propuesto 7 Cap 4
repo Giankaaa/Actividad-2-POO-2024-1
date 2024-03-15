@@ -1,0 +1,32 @@
+package com.mycompany.ejercicios_parte_1;
+
+
+import java.util.Scanner;
+
+public class Ejercicio_7 {
+
+    public static void main(String args[]) {
+        
+        double Valor_A;
+        double Valor_B;
+        
+        System.out.println("Ingrese el valor del primer número llamado A");
+        Scanner entrada = new Scanner(System.in);
+        Valor_A = entrada.nextDouble();
+        
+        System.out.println("Ingrese el valor del segundo número llamado B");
+        Valor_B = entrada.nextDouble();
+        
+        if (Valor_A > Valor_B){
+            System.out.println(" El valor de A es mayor que B");
+        }
+        else if ( Valor_B > Valor_A){
+            System.out.println(" El valor de B es mayor que A");
+        }
+        else { 
+            System.out.println(" El valor de A es igual a B");
+        }
+        
+    } 
+     
+}
