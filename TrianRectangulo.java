@@ -13,7 +13,7 @@ public class TrianRectangulo {
         return (b*h/2);
     }
 
-    double calcularPerímetro() {
+    double calcularPerimetro() {
         return (b+h+calcularHipotenusa()); /* Invoca almétodo calcular hipotenusa */
     }
 
