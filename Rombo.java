@@ -13,7 +13,7 @@ public class Rombo {
         return x*y/2;
     }
 
-    double calcularPerímetro() {
+    double calcularPerimetro() {
         return 4*(Math.pow((x*x)+(y*y),0.5)/2);
     }
 }
