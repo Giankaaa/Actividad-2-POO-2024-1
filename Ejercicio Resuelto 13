@@ -1,0 +1,53 @@
+/*Ejercicio resuelto Nº 13
+Un almacén efectúa una promoción en la cual se hace un descuento sobre el valor de la
+compra total, según el color de la bolita que el cliente saque al pagar en caja. Si la bolita
+es blanca no se le hará descuento alguno, si es verde se le hará un 10% de descuento, si es
+amarilla un 25%, si es azul un
+50% y si es roja un 100%. Hacer un algoritmo para determinar la cantidad final que un
+cliente deberá pagar por su compra. Se sabe que sólo hay bolitas de los colores
+mencionados.
+ */
+
+package poo.ejercicioresuelto13;
+
+import java.util.Scanner;
+
+public class EjercicioResuelto13 {
+
+    public static void main(String[] args) {
+        double VALCOMP; // Valor de la compra.
+        String COLOR; // Color de la bolita.
+        double VALPAG; // Valor a pagar.
+        double PDES; // Porcentaje de descuento.
+        
+        System.out.println("Ingrese el valor de la compra");
+        Scanner entradaVALCOMP = new Scanner(System.in);
+        VALCOMP = entradaVALCOMP.nextDouble();
+        
+        System.out.println("Ingrese el color de la bola");
+        Scanner entradaCOLOR = new Scanner(System.in);
+        COLOR = entradaCOLOR.next();
+        
+        if (COLOR.equals("blanco")){
+            PDES = 0; //0% de descuento 
+        }
+        else if (COLOR.equals("verde")){
+            PDES = 10; //10% de descuento 
+        }
+        else if (COLOR.equals("amarillo")){
+            PDES = 25; //25% de descuento 
+        }
+        else if (COLOR.equals("azul")){
+            PDES = 50; //50% de descuento 
+        }
+        else{
+            PDES = 100; //100% de descuento 
+        }
+        
+        VALPAG = VALCOMP-(VALCOMP*(PDES/100));
+        
+        
+        System.out.println("EL CLIENTE PAGA : $" + VALPAG);
+ 
+    }
+}
