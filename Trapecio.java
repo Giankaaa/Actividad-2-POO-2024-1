@@ -15,7 +15,7 @@ public class Trapecio {
         return (w*u/2)+z;
     }
 
-    double calcularPerímetro() {
+    double calcularPerimetro() {
         return w+u+2*(Math.sqrt(Math.pow((w-u)/2,2)+Math.pow(z,2)));
     }
 }
