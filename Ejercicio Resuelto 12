@@ -1,0 +1,53 @@
+/*
+ * Ejercicio resuelto Nº 12
+Determinar la cantidad de dinero recibida por un trabajador por concepto de las horas
+semanales trabajadas en una empresa, sabiendo que cuando las horas de trabajo exceden
+de 40, el resto se considera horas extras y se pagan al doble de una hora normal, cuando
+no exceden de 8; si las horas extras exceden de 8, se pagan las primeras 8 al doble de lo
+que se paga una hora normal y el resto al triple. Del trabajador se conocen los siguientes
+datos: nombres, número de horas trabajadas en la semana y valor recibido por una hora
+normal de trabajo.
+ */
+
+package poo.ejercicioresuelto12;
+
+import java.util.Scanner;
+
+public class EjercicioResuelto12 {
+    
+    public static void main(String[] args) {
+        
+        String NOM; //Nombre del trabajador.
+        int NHT; //Número de horas trabajadas.
+        int VHN; //Valor hora normal trabajada.
+        int HET; //Horas extras trabajadas.
+        int HEE8; //Horas extras que exceden de 8.
+        int SALARIO; //Pago total que recibe el trabajador.
+        
+        System.out.println("Ingrese el nombre del trabajador");
+        Scanner entradaNOM = new Scanner(System.in);
+        NOM = entradaNOM.nextLine();
+        
+        System.out.println("Ingrese el numero de horas trabajadas");
+        Scanner entradaNHT = new Scanner(System.in);
+        NHT = entradaNHT.nextInt();
+        
+        System.out.println("Ingrese el valor de cada hora normal");
+        Scanner entradaVHN = new Scanner(System.in);
+        VHN = entradaVHN.nextInt();
+        
+        HET = NHT-40;
+        
+        if (HET <= 8){
+            SALARIO = 40*VHN + HET*VHN*2;
+        }
+        else {
+            HEE8 = HET-8;
+            SALARIO = 40*VHN + 8*VHN*2 + HEE8*VHN*3;
+        }
+        
+        System.out.println("EL TRABAJADOR " + NOM + " DEVENGO : $" + SALARIO);
+        
+      
+    }
+}
