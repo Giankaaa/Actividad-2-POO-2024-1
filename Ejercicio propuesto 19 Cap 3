@@ -1,0 +1,29 @@
+package com.mycompany.ejercicios_parte_1;
+
+
+import java.util.Scanner;
+
+public class Ejercicio_19 {
+    
+    public static void main(String[] args) {
+        
+        double Lado_triangulo_Eq;
+        
+        System.out.println("Ingrese el valor del lado del triángulo equilatero en metros");
+        Scanner entrada = new Scanner(System.in);
+        Lado_triangulo_Eq = entrada.nextDouble();
+        
+        double Area_Equilatero, Perimetro_Equilatero, Altura_Equilatero;
+        
+        Altura_Equilatero = Lado_triangulo_Eq*Math.sqrt(3)/2;
+        Area_Equilatero = (Lado_triangulo_Eq*Altura_Equilatero)/2;
+        Perimetro_Equilatero = 3*Lado_triangulo_Eq;
+        
+        System.out.println("El triángulo equilatero de lado " + Lado_triangulo_Eq +
+                            " m, tiene un valor para perímetro de " + Perimetro_Equilatero + 
+                           " m y un valor para su área de " + Area_Equilatero + "m^2");
+        
+        
+    }
+    
+}
